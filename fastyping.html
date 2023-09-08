@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anis Bacha" />
+    <title>Typing Test</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="logo/THL.png"
+        alt="THL Logo"
+        width="500"
+        height="500"
+      />
+      <p class="header__p">TRY HARD LEARNING</p>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Notes</a></li>
+          <li><a href="#">Quizes</a></li>
+          <li><a href="fastyping.html">Typing Test</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-tt">
+      <section class="main__typingtype">
+        <h1 class="main__h1">What would you like to type:</h1>
+        <ul class="main__list">
+          <li id="randomWords">Words</li>
+          <li id="randomQuotes">Paragraphs</li>
+          <li id="yourTopics">Your Topics</li>
+        </ul>
+      </section>
+
+      <section class="main__typingarea">
+        <p class="main__typingtext" id="typingtext">Loading...</p>
+        <input
+          type="text"
+          id="input-text"
+          class="main__input"
+          autocomplete="off"
+          autofocus
+          placeholder="Type To Start The Test"
+        />
+      </section>
+      <section class="main__stats">
+        <ul class="main__list">
+          <li>Time Left : <span id="timer">60</span> s</li>
+          <li>WPM : <span id="wpm">0</span></li>
+          <li>Accuracy : <span id="accuracy">0</span> %</li>
+        </ul>
+      </section>
+      <button class="main__btn" id="button">New Test</button>
+    </main>
+  </body>
+</html>

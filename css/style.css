@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
+/*|| CSS RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*|| VARIABLES*/
+:root {
+  --BGCOLOR: white;
+  --DARKCOLOR: black;
+
+  --FF: "Neucha", sans-sarif;
+  --FS: clamp(1rem, 5vw, 1.5rem);
+  --FS-L: clamp(2rem, 7vw, 3.5rem);
+
+  --MARGIN-S: 1rem;
+  --MARGIN-M: 1.5rem;
+  --MARGIN-L: 2rem;
+
+  --PADDING-S: 1rem;
+  --PADDING-M: 1.5rem;
+  --PADDING-L: 2rem;
+
+  --DOWIDTH: clamp(250px, 5vw, 500px);
+}
+
+body {
+  background-color: var(--BGCOLOR);
+  color: var(--DARKCOLOR);
+  font-family: var(--FF);
+  font-size: var(--FS);
+  min-height: 100vh;
+}
+
+/*TITLE BAR*/
+.header {
+  background-color: white;
+  padding: var(--PADDING-S);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.header__p {
+  display: inline-block;
+  color: var(--DARKCOLOR);
+  font-size: var(--FS);
+  font-weight: bold;
+
+  letter-spacing: 0.1em;
+  z-index: 100;
+}
+.header__logo {
+  left: 2%;
+  top: 0;
+  display: inline-block;
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  transform: translateY(5px);
+}
+.header__nav,
+.main__list {
+  display: inline-block;
+}
+.header__list li,
+.main__list li {
+  display: inline-block;
+  list-style-type: none;
+  padding-inline: var(--PADDING-M);
+}
+.header__list li a:any-link {
+  color: var(--DARKCOLOR);
+  text-decoration: none;
+}
+.header__list li a:hover {
+  text-decoration: underline;
+}
+
+.header__intro {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  place-content: center;
+  align-items: center;
+}
+.header__h1 {
+  font-size: var(--FS-L);
+  text-align: center;
+
+  color: var(--DARKCOLOR);
+}
+
+.main__do {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.main h2 {
+  text-align: center;
+}
+.main__do p {
+  padding: 1rem;
+  margin-top: var(--MARGIN-L);
+}
+.main__do a {
+  color: white;
+}
+.main__donote,
+.main__doquiz,
+.main__dotopic {
+  width: var(--DOWIDTH);
+  height: 250px;
+  background-color: rgba(178, 92, 34, 0.63);
+  border-radius: 20px;
+
+  /*     padding: 1rem; */
+  margin: 1.3rem 0 5rem 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: end;
+  justify-content: center;
+}
+.main__donote {
+  background-image: url(../img/note.png);
+  background-size: cover;
+}
+.main__doquiz {
+  background-image: url(../img/quiz.png);
+  background-size: cover;
+}
+.main__dotopic {
+  background-image: url(../img/topic.png);
+  background-size: cover;
+}
+
+/*|| TOPICS AVAILABLE*/
+.main__topics h2 {
+  border-top: 4px solid var(--DARKCOLOR);
+  padding: 1rem;
+}
+.main__topics-list {
+  list-style-position: inside;
+  list-style-type: disc;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main__topics-list li {
+  position: relative;
+  padding: var(--MARGIN-S);
+  margin: var(--MARGIN-S);
+}
+.main__topics-side {
+  position: absolute;
+  width: 25%;
+  min-height: 100vh;
+  background-color: var(--DARKCOLOR);
+  background-image: url(../img/pat1.png);
+}
+
+/*TYPING TEST*/
+/*CHOOSE TYPING TYPE*/
+.main-tt {
+  margin: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__typingtype {
+  margin-block-end: 2rem;
+  min-width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main__h1 {
+  font-size: 2rem;
+}
+/*TYPING AREA*/
+.main__typingarea {
+  max-width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main__typingtext {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-block: 1.5rem;
+}
+.limitTextShown {
+  line-height: 1.2em;
+  height: 3.6em;
+  overflow: hidden;
+}
+.scrollDown {
+  overflow: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.main__typingtext::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main__typingtext {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.main__input {
+  font-family: inherit;
+  font-size: 2rem;
+  margin-block: 1rem;
+  padding: 1rem 3rem;
+  width: clamp(300px, 50vw, 700px);
+  border: 0.5px solid #1e1e1e;
+  border-radius: 20px;
+}
+
+.correct-word {
+  color: green;
+}
+
+.incorrect-word {
+  color: red;
+  text-decoration: underline;
+}
+
+.main__stats {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.main__btn {
+  background-color: #252525;
+  color: whitesmoke;
+  font: inherit;
+  padding: 0.5rem 3rem;
+  margin: 2rem;
+  border: 2px solid #1e1e1e;
+  border-radius: 20px;
+}
