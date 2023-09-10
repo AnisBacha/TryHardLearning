@@ -192,6 +192,12 @@ body {
 .main__h1 {
   font-size: 2rem;
 }
+.main__typingtype li:hover {
+  cursor: pointer;
+}
+.selectedTypingType{
+  color: green;
+}
 /*TYPING AREA*/
 .main__typingarea {
   max-width: 90%;
@@ -254,8 +260,13 @@ body {
   background-color: #252525;
   color: whitesmoke;
   font: inherit;
-  padding: 0.5rem 3rem;
+  padding: 1.5rem 3rem;
   margin: 2rem;
   border: 2px solid #1e1e1e;
   border-radius: 20px;
+  cursor: pointer;
+}
+.main__btn:hover,
+.main__btn:focus{
+background-color: #474747;
 }
